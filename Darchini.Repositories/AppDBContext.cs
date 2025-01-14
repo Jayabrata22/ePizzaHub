@@ -6,6 +6,14 @@ namespace Darchini.Repositories
 {
     public class AppDBContext : IdentityDbContext<User , Role, int>
     {
+        public AppDBContext()
+        {
+            
+
+        }
+        public AppDBContext(DbContextOptions<AppDBContext> options) : base(options)
+        {
+        }
 
         public DbSet<Category> Categories { get; set; }
         public DbSet<Item> Items { get; set; }

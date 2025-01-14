@@ -11,7 +11,7 @@ namespace eFoodOrder.Repositories.implementation
         {
             get
             {
-                return appDBContext as AppDBContext;
+                return _appDBContext as AppDBContext;
             }
         } 
         public OrderRepository(DbContext dbContext) : base(dbContext)
